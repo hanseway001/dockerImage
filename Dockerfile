@@ -1,4 +1,4 @@
-FROM node
+FROM node:18
 
 LABEL Maintainer="Wayne Hansen"
 
@@ -6,11 +6,13 @@ LABEL Description="This is a docker image for class"
 
 LABEL Cohort="16"
 
-LABEL Animal=
+LABEL Animal="goat"
+
+WORKDIR /usr/src/app
 
 COPY . .
 
-EXPOSE 8080 9090 8443 5050
+EXPOSE 8080
 
 RUN npm install
 
